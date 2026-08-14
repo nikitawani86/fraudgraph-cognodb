@@ -128,15 +128,24 @@ Maven
 
 
 Running Locally
+
 Prerequisites
+
 Install:
+
 Java 17+
+
 Maven
+
 Git
+
 CognoDB account
 
+
 Clone the Repository
+
 git clone https://github.com/nikitawani86/fraudgraph-cognodb.git
+
 cd fraudgraph-cognodb
 
 
@@ -149,4 +158,5 @@ open: http://localhost:8080
 Author
 
 Nikita Wani
+
 GitHub: https://github.com/nikitawani86/fraudgraph-cognodb
