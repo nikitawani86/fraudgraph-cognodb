@@ -112,25 +112,8 @@ Complete Model
                  ┌──────────────┐
                  │   Merchant   │
                  └──────────────┘
-				 
-Example Fraud Investigation
-Consider the following graph:
-CUST-001
-   |
-  OWNS
-   |
-ACC-001
-   |
-  USES
-   |
-DEV-001
-   |
-   ├──────── USES ────────> ACC-002
-   |
-   └──────── USES ────────> ACC-004
-   
-   
-   
+
+					
  Technology Stack
 Java
 Spring Boot
@@ -152,8 +135,7 @@ Maven
 Git
 CognoDB account
 
-
-1. Clone the Repository
+Clone the Repository
 git clone https://github.com/nikitawani86/fraudgraph-cognodb.git
 cd fraudgraph-cognodb
 
