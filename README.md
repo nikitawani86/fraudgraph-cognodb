@@ -143,26 +143,28 @@ CSS
 JavaScript
 Maven
 
-Architecture
-                 ┌──────────────────┐
-                 │    Web Browser   │
-                 │    HTML / JS     │
-                 └────────┬─────────┘
-                          │
-                          ▼
-                 ┌──────────────────┐
-                 │   Spring Boot    │
-                 │    REST APIs     │
-                 └────────┬─────────┘
-                          │
-                          ▼
-                 ┌──────────────────┐
-                 │  Neo4j Java      │
-                 │     Driver      │
-                 └────────┬─────────┘
-                          │
-                          ▼
-                 ┌──────────────────┐
-                 │     CognoDB      │
-                 │  Graph Database  │
-                 └──────────────────┘
+
+Running Locally
+Prerequisites
+Install:
+Java 17+
+Maven
+Git
+CognoDB account
+
+
+1. Clone the Repository
+git clone https://github.com/nikitawani86/fraudgraph-cognodb.git
+cd fraudgraph-cognodb
+
+
+Configure the CognoDB environment variables, load data/seed.cypher into CognoDB, and run:
+
+mvn spring-boot:run
+
+open: http://localhost:8080
+
+Author
+
+Nikita Wani
+GitHub: https://github.com/nikitawani86/fraudgraph-cognodb
