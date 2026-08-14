@@ -1,0 +1,16 @@
+# Eclipse
+.metadata/
+.settings/
+.project
+.classpath
+
+# IntelliJ
+.idea/
+*.iml
+
+# Maven
+target/
+
+# Secrets
+.env
+application-local.yml

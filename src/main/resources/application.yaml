@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: FraudDetection
+server:
+  port: 8080
+
+cognodb:
+  uri: ${COGNODB_URI}
+  username: ${COGNODB_USERNAME}
+  password: ${COGNODB_PASSWORD}
