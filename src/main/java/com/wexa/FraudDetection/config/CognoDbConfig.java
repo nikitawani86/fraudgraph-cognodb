@@ -11,13 +11,13 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class CognoDbConfig {
 
-	@Value("${congodb.uri}")
+	@Value("${cognodb.uri}")
 	private String uri;
 	
-	@Value("${congodb.username}")
+	@Value("${cognodb.username}")
 	private String username;
 	
-	@Value("${congodb.password}")
+	@Value("${cognodb.password}")
 	private String password;
 	
 	@Bean
