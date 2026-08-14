@@ -33,7 +33,7 @@ In a relational database, this investigation would require multiple tables and s
 
 With CognoDB, the same investigation can be expressed as a graph traversal:
 
-```text
+text
 Customer
    |
   OWNS
@@ -47,3 +47,122 @@ Customer
   USES
    |
  Account
+ 
+ 
+Graph Data Model
+	Nodes
+The application contains the following node types:
+
+Customer
+Account
+Device
+Transaction
+Merchant
+
+
+Relationships
+
+Customer ──OWNS──> Account
+
+Account ──USES──> Device
+
+Account ──MADE──> Transaction
+
+Transaction ──PAID_TO──> Merchant
+
+
+Complete Model
+
+
+                 ┌──────────────┐
+                 │   Customer   │
+                 └──────┬───────┘
+                        │
+                       OWNS
+                        │
+                        ▼
+                 ┌──────────────┐
+                 │   Account    │
+                 └──────┬───────┘
+                        │
+                       USES
+                        │
+                        ▼
+                 ┌──────────────┐
+                 │    Device    │
+                 └──────┬───────┘
+                        │
+                       USES
+                        │
+                        ▼
+                 ┌──────────────┐
+                 │   Account    │
+                 └──────┬───────┘
+                        │
+                       MADE
+                        │
+                        ▼
+                 ┌──────────────┐
+                 │ Transaction  │
+                 └──────┬───────┘
+                        │
+                     PAID_TO
+                        │
+                        ▼
+                 ┌──────────────┐
+                 │   Merchant   │
+                 └──────────────┘
+				 
+Example Fraud Investigation
+Consider the following graph:
+CUST-001
+   |
+  OWNS
+   |
+ACC-001
+   |
+  USES
+   |
+DEV-001
+   |
+   ├──────── USES ────────> ACC-002
+   |
+   └──────── USES ────────> ACC-004
+   
+   
+   
+ Technology Stack
+Java
+Spring Boot
+REST API
+Neo4j Java Driver
+CognoDB
+Cypher
+HTML
+CSS
+JavaScript
+Maven
+
+Architecture
+                 ┌──────────────────┐
+                 │    Web Browser   │
+                 │    HTML / JS     │
+                 └────────┬─────────┘
+                          │
+                          ▼
+                 ┌──────────────────┐
+                 │   Spring Boot    │
+                 │    REST APIs     │
+                 └────────┬─────────┘
+                          │
+                          ▼
+                 ┌──────────────────┐
+                 │  Neo4j Java      │
+                 │     Driver      │
+                 └────────┬─────────┘
+                          │
+                          ▼
+                 ┌──────────────────┐
+                 │     CognoDB      │
+                 │  Graph Database  │
+                 └──────────────────┘

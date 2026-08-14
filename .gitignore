@@ -3,6 +3,12 @@
 .settings/
 .project
 .classpath
+.idea/
+*.iml
+target/
+bin/
+.env
+application-local.yml
 
 # IntelliJ
 .idea/
@@ -13,4 +19,4 @@ target/
 
 # Secrets
 .env
-application-local.yml
+application-local.yaml
