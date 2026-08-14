@@ -415,9 +415,17 @@ async function investigate() {
         }
 
 
-        message.innerHTML =
-            "<span class='success'>Investigation completed successfully.</span>";
+        if (connectionData.length === 0 && transactionData.length === 0) {
 
+            message.innerHTML =
+                "<span class='empty'>No investigation data found for this customer.</span>";
+
+        } else {
+
+            message.innerHTML =
+                "<span class='success'>Investigation completed successfully.</span>";
+
+        }
 
     } catch (error) {
 
